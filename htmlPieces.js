@@ -31,7 +31,7 @@ function responseDataToDesktopHtml(responseData) {
 
   const rowValues = responseData.values.slice(1);
   const sortedRowValues = rowValues.sort(
-    (a, b) => new Date(a).getTime() - new Date(b).getTime()
+    (a, b) => new Date(b[0]).getTime() - new Date(a[0]).getTime()
   );
 
   const allRowsHtml = sortedRowValues.map((row) => rowDataToHtml(row)).join("");
@@ -162,6 +162,11 @@ function responseDataToMobileHtml(responseData) {
                     <div>
                       <h4 class="month-header">${MONTHS[monthNum]}</h4>
                       ${formattedDataByYearMonth[year][monthNum]
+                        .sort(
+                          (a, b) =>
+                            new Date(b.Timestamp).getTime() -
+                            new Date(a.Timestamp).getTime()
+                        )
                         .map((book) => rowDataToBookCardHtml(book))
                         .join("")}
                     </div>
