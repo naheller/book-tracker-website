@@ -1,0 +1,80 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: cursive;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  border-spacing: 0;
+  margin-top: 1rem;
+  th {
+    background-color: white;
+  }
+  th,
+  td {
+    padding: 0.5rem;
+  }
+  tr {
+    background-color: #e3f4f4;
+  }
+  tr:nth-child(even) {
+    background-color: #d2e9e9;
+  }
+}
+
+.book-card {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  background-color: #e3f4f4;
+}
+
+.book-card:nth-child(even) {
+  background-color: #d2e9e9;
+}
+
+.book-card .title {
+  font-weight: 600;
+  margin-bottom: 0rem;
+}
+
+.book-card .date {
+  font-variant: small-caps;
+}
+
+.book-card .author {
+  margin-top: 0.25rem;
+}
+
+.book-card .genre {
+  font-style: italic;
+  margin-bottom: 0rem;
+  opacity: 0.75;
+}
+
+.book-card .rating {
+  font-size: 14px;
+  margin-top: 0.25rem;
+  opacity: 0.75;
+}
+
+.month-header {
+  margin-bottom: 0.5rem;
+}
+
+#desktop-content {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  #desktop-content {
+    display: initial;
+  }
+
+  #mobile-content {
+    display: none;
+  }
+}
