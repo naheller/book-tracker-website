@@ -40,7 +40,6 @@ function responseDataToDesktopHtml(responseData) {
     <table>
       <tr>
         <th>Date</th>
-        <th>${goober}</th>
         <th>${title}</th>
         <th>${author}</th>
         <th>${genre}</th>
@@ -64,7 +63,6 @@ function rowDataToHtml(rowData) {
   return `
     <tr>
       <td>${date.toLocaleDateString()}</td>
-      <td>${goober}</td>
       <td>${title}</td>
       <td>${author}</td>
       <td>${genre}</td>
