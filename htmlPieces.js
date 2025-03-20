@@ -9,6 +9,7 @@ function getHtmlWithContentOrError(
       <head>
         <title>${customTitle}</title>
         <link rel="stylesheet" href="styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
         <h1>${customTitle}</h1>
